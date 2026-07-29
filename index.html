@@ -1,13 +1,12 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-<link rel="icon" href="/favicon.ico" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title / description / OG / Twitter / JSON-LD are emitted dynamically by the
-         "SEO Net Control" mu-plugin via pre_get_document_title + wp_head. A static
+         "SEO Net Control" mu-plugin (wp-content/mu-plugins/seo-net-control.php) via
+         pre_get_document_title + wp_head. Do NOT hardcode them here again — a static
          duplicate block here previously caused two <title> tags + duplicate meta/OG/
          JSON-LD on the live homepage (fixed 2026-07-28, night-site-audit). -->
 
@@ -16,22 +15,19 @@
 <title>Medium Psychic Readings | Connect With Spirit & Loved Ones</title>
 <link rel="alternate" type="application/rss+xml" title="Medium Psychic &raquo; Feed" href="https://medium-psychic.net/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Medium Psychic &raquo; Comments Feed" href="https://medium-psychic.net/comments/feed/" />
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://medium-psychic.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmedium-psychic.net%2F" />
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://medium-psychic.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmedium-psychic.net%2F&#038;format=xml" />
-
 <!-- SEO patch (WP-Net-Control) -->
 <meta name="description" content="Gifted psychic mediums — bridging the gap between worlds with care. Medium Psychic is a platform dedicated to gifted psychic mediums who possess dual abilitie" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Medium Psychic - Connect with Trusted Psychic Mediums Online" />
 <meta property="og:description" content="Gifted psychic mediums — bridging the gap between worlds with care. Medium Psychic is a platform dedicated to gifted psychic mediums who possess dual abilitie" />
 <meta property="og:url" content="https://medium-psychic.net/" />
-<meta property="og:image" content="https://medium-psychic.net/wp-content/themes/twentytwentyfive/react-app/assets/hero_portrait-DXBMgajf.jpg" />
+<meta property="og:image" content="https://medium-psychic.net/hero_portrait.jpg" />
 <meta property="og:site_name" content="Medium Psychic" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Medium Psychic - Connect with Trusted Psychic Mediums Online" />
 <meta name="twitter:description" content="Gifted psychic mediums — bridging the gap between worlds with care. Medium Psychic is a platform dedicated to gifted psychic mediums who possess dual abilitie" />
-<meta name="twitter:image" content="https://medium-psychic.net/wp-content/themes/twentytwentyfive/react-app/assets/hero_portrait-DXBMgajf.jpg" />
-<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","@id":"https:\/\/medium-psychic.net\/#organization","name":"Medium Psychic","url":"https:\/\/medium-psychic.net\/","description":"Gifted psychic mediums \u2014 bridging the gap between worlds with care. Medium Psychic is a platform dedicated to gifted psychic mediums who possess dual abilitie","logo":{"@type":"ImageObject","url":"https:\/\/medium-psychic.net\/wp-content\/themes\/twentytwentyfive\/react-app\/assets\/hero_portrait-DXBMgajf.jpg"}},{"@type":"WebSite","@id":"https:\/\/medium-psychic.net\/#website","url":"https:\/\/medium-psychic.net\/","name":"Medium Psychic","description":"Gifted psychic mediums \u2014 bridging the gap between worlds with care. Medium Psychic is a platform dedicated to gifted psychic mediums who possess dual abilitie","publisher":{"@id":"https:\/\/medium-psychic.net\/#organization"},"inLanguage":"en-US"}]}</script>
+<meta name="twitter:image" content="https://medium-psychic.net/hero_portrait.jpg" />
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","@id":"https:\/\/medium-psychic.net\/#organization","name":"Medium Psychic","url":"https:\/\/medium-psychic.net\/","description":"Gifted psychic mediums \u2014 bridging the gap between worlds with care. Medium Psychic is a platform dedicated to gifted psychic mediums who possess dual abilitie","logo":{"@type":"ImageObject","url":"https:\/\/medium-psychic.net\/hero_portrait.jpg"}},{"@type":"WebSite","@id":"https:\/\/medium-psychic.net\/#website","url":"https:\/\/medium-psychic.net\/","name":"Medium Psychic","description":"Gifted psychic mediums \u2014 bridging the gap between worlds with care. Medium Psychic is a platform dedicated to gifted psychic mediums who possess dual abilitie","publisher":{"@id":"https:\/\/medium-psychic.net\/#organization"},"inLanguage":"en-US"}]}</script>
 <!-- /SEO patch -->
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -122,8 +118,7 @@ h4 {
 a{text-decoration-thickness:1px!important;text-underline-offset:.1em}:where(.wp-site-blocks :focus){outline-width:2px;outline-style:solid}.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation-item:not(:last-child){margin-bottom:3px}.wp-block-navigation .wp-block-navigation-item .wp-block-navigation-item__content{outline-offset:4px}.wp-block-navigation .wp-block-navigation-item ul.wp-block-navigation__submenu-container .wp-block-navigation-item__content{outline-offset:0}blockquote,caption,figcaption,h1,h2,h3,h4,h5,h6,p{text-wrap:pretty}.more-link{display:block}:where(pre){overflow-x:auto}
 /*# sourceURL=https://medium-psychic.net/wp-content/themes/twentytwentyfive/style.min.css */
 </style>
-<link rel="https://api.w.org/" href="https://medium-psychic.net/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://medium-psychic.net/wp-json/wp/v2/pages/16" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://medium-psychic.net/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 7.0" />
+<meta name="generator" content="WordPress 7.0.2" />
 <link rel="canonical" href="https://medium-psychic.net/" />
 <link rel='shortlink' href='https://medium-psychic.net/' />
 <style class="wp-fonts-local">
@@ -179,17 +174,12 @@ a{text-decoration-thickness:1px!important;text-underline-offset:.1em}:where(.wp-
             margin-bottom: 0.5rem;
         }
     </style>
-<!-- i18n hreflang (WP-Net-Control) -->
-<!-- i18n hreflang it_subdomain -->
-<link rel="alternate" hreflang="en" href="https://medium-psychic.net/" />
-<link rel="alternate" hreflang="it" href="https://it.medium-psychic.net/" />
-<link rel="alternate" hreflang="x-default" href="https://medium-psychic.net/" />
 </head>
 <body class="home wp-singular page-template-default page page-id-16 wp-embed-responsive wp-theme-twentytwentyfive react-app-page">
         <div id="root">
-        <!-- SEO fallback H1: overwritten by the React bundle on mount; only
-             persists for crawlers/exports that do not execute JS, so the
-             page always carries exactly one <h1>. -->
+        <!-- SEO fallback H1: the React bundle overwrites this on mount; it only
+             persists for crawlers/exports that don't execute JS (e.g. Simply
+             Static), so the homepage always carries exactly one <h1>. -->
         <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Medium Psychic - Connect with Trusted Psychic Mediums Online</h1>
     </div>
 
@@ -261,33 +251,943 @@ a{text-decoration-thickness:1px!important;text-underline-offset:.1em}:where(.wp-
     <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/twentytwentyfive/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
+<style id="homeblocks-css">
+/* tools/homeblocks/homeblocks.css
+ * Single stylesheet for all 20 homeblocks sites. Inlined once (in a <style>
+ * tag) by inc/homeblocks.php — never enqueued as a static asset, so it
+ * survives a Simply Static export with zero asset-path risk.
+ *
+ * Everything is scoped under .hb-scope so it can never collide with a
+ * theme's own styles: no bare element selectors, no global resets here.
+ *
+ * Color/spacing tokens cascade through each theme's own CSS custom
+ * properties first (--hb-accent, then a theme's own --accent /
+ * --color-accent / --primary, ...) and fall back to a sane default only
+ * when none of those exist.
+ */
+
+.hb-scope {
+  --hbc-accent:  var(--hb-accent,  var(--accent,       var(--color-accent, var(--primary,   #6d4aff))));
+  --hbc-text:    var(--hb-text,    var(--text,          var(--color-text,   var(--ink,        #1c1e26))));
+  --hbc-muted:   var(--hb-muted,   var(--muted,         var(--color-muted,  var(--ink-3,      #6b7280))));
+  --hbc-surface: var(--hb-surface, var(--surface,       var(--color-surface,var(--bg-soft,    #f4f5f8))));
+  --hbc-border:  var(--hb-border,  var(--border,        var(--color-border, var(--line,       #e2e4ea))));
+  --hbc-good:    var(--hb-good,    #2f8f4e);
+  --hbc-avoid:   #9aa0ab;
+
+  display: block;
+  color: var(--hbc-text);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.hb-scope * { box-sizing: border-box; }
+
+/* ── Section rhythm ─────────────────────────────────────────── */
+
+.hb-scope > .wp-block-group {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: clamp(2.5rem, 5vw, 4.5rem) 1.25rem;
+}
+
+.hb-scope > .wp-block-group + .wp-block-group {
+  border-top: 1px solid var(--hbc-border);
+}
+
+.hb-scope h2.wp-block-heading { font-size: clamp(1.5rem, 2.5vw, 2rem); margin: 0 0 1rem; }
+.hb-scope h3.wp-block-heading { font-size: clamp(1.1rem, 1.8vw, 1.35rem); margin: 1.5rem 0 0.5rem; }
+.hb-scope p { margin: 0 0 1rem; }
+.hb-scope .hb-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--hbc-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
+
+.hb-hero h1.wp-block-heading,
+.hb-hero h2.wp-block-heading { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.15; }
+
+/* ── Cards (also reused visually by .hb-card columns) ───────── */
+
+.hb-cards .wp-block-columns { gap: 1.5rem; }
+.hb-card {
+  background: var(--hbc-surface);
+  border: 1px solid var(--hbc-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.hb-card h3.wp-block-heading { margin-top: 0; }
+
+/* ── Steps ───────────────────────────────────────────────────── */
+
+.hb-steps h3.wp-block-heading {
+  color: var(--hbc-accent);
+  border-left: 3px solid var(--hbc-accent);
+  padding-left: 0.75rem;
+}
+
+/* ── Topic: good / avoid lists via ::marker, no icon files ──── */
+
+.hb-topic-label { font-weight: 600; margin-bottom: 0.35rem; }
+.hb-good-label { color: var(--hbc-good); }
+.hb-avoid-label { color: var(--hbc-avoid); }
+.hb-topic ul.hb-good,
+.hb-topic ul.hb-avoid { padding-left: 1.4em; margin: 0 0 1rem; }
+.hb-topic ul.hb-good li::marker { content: "\2713  "; color: var(--hbc-good); }
+.hb-topic ul.hb-avoid li::marker { content: "\2013  "; color: var(--hbc-avoid); }
+.hb-topic .hb-tip {
+  font-size: 0.9rem;
+  color: var(--hbc-muted);
+  font-style: italic;
+}
+
+/* ── FAQ ─────────────────────────────────────────────────────── */
+
+.hb-faq h3.wp-block-heading { margin-top: 1.5rem; }
+.hb-faq h3.wp-block-heading:first-of-type { margin-top: 0.5rem; }
+
+/* ── CTA button ──────────────────────────────────────────────── */
+
+.hb-scope .wp-block-button.hb-cta { margin: 0.75rem 0; }
+.hb-scope a.wp-block-button__link.hb-cta {
+  display: inline-block;
+  background: var(--hbc-accent);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.7em 1.4em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+.hb-scope a.wp-block-button__link.hb-cta:hover,
+.hb-scope a.wp-block-button__link.hb-cta:focus-visible {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* ── Disclaimer ──────────────────────────────────────────────── */
+
+.hb-disclaimer { font-size: 0.85rem; color: var(--hbc-muted); }
+.hb-disclaimer p { margin-bottom: 0.5rem; }
+
+/* ── Responsive: single column under 782px, guard against overflow ── */
+
+@media (max-width: 782px) {
+  .hb-scope > .wp-block-group { padding-left: 1rem; padding-right: 1rem; }
+  .hb-cards .wp-block-columns,
+  .hb-scope .wp-block-columns {
+    flex-wrap: wrap;
+  }
+  .hb-cards .wp-block-columns > .wp-block-column,
+  .hb-scope .wp-block-columns > .wp-block-column {
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
+}
+
+.hb-scope img { max-width: 100%; height: auto; }
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .hb-scope a.wp-block-button__link.hb-cta {
+    transition: none;
+  }
+  .hb-scope a.wp-block-button__link.hb-cta:hover,
+  .hb-scope a.wp-block-button__link.hb-cta:focus-visible {
+    transform: none;
+  }
+}
+
+</style>
+<div class="hb-scope">
+<div class="wp-block-group hb-hero has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-hero">
+<h2 class="wp-block-heading">A Medium Reading Can Feel Like a Door Left Open</h2>
+
+
+
+<p class="wp-block-paragraph">Grief doesn&#8217;t run on a schedule. It shows up in a song, an empty chair, a phone number you can&#8217;t bring yourself to delete.</p>
+
+
+
+<p class="wp-block-paragraph">A gifted medium doesn&#8217;t promise to bring anyone back — but they can sit with you in that quiet, listen for what wants to be heard, and relay it back with care. If part of you is ready to listen too, a session is here whenever you are.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Connect With a Medium Now</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-prose has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-why-this-site">
+<p class="wp-block-paragraph">Medium Psychic connects you with readers who focus specifically on connection and communication with those who&#8217;ve passed. That&#8217;s narrower than general psychic work, and it shows in how a session unfolds — less about predicting your week ahead, more about opening a line and seeing who answers.</p>
+
+
+
+<p class="wp-block-paragraph">Every medium listens differently. Some receive words. Some receive pictures. Some just get a feeling in their chest that won&#8217;t ease until they&#8217;ve said it out loud. None of that makes one approach more real than another — it just means different messages travel through different channels, and a good medium knows which one is theirs.</p>
+
+
+
+<p class="wp-block-paragraph">You don&#8217;t need a script, and you don&#8217;t need to believe going in. Bring a name, a memory, or just an ache you can&#8217;t quite name yet, and let the medium describe what they&#8217;re picking up. If it lines up with something only you would know, you&#8217;ll feel it. If nothing lands right away, that&#8217;s normal too — a patient medium will say so honestly rather than reach for something just to fill the silence.</p>
+</div>
+
+
+
+<div class="wp-block-group hb-cards has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-scenarios">
+<h2 class="wp-block-heading">You&#8217;re Not the Only One Reaching Out Tonight</h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-794e3cfa wp-block-columns-is-layout-flex">
+<div class="wp-block-column hb-card is-layout-flow wp-block-column-is-layout-flow">
+<h3 class="wp-block-heading">The Two Coffee Cups</h3>
+
+
+
+<p class="wp-block-paragraph">He still sets out two mugs most mornings, six months after his wife passed. He isn&#8217;t chasing closure exactly — he just wants to know if she notices.</p>
+</div>
+
+
+
+<div class="wp-block-column hb-card is-layout-flow wp-block-column-is-layout-flow">
+<h3 class="wp-block-heading">The Argument That Never Got Finished</h3>
+
+
+
+<p class="wp-block-paragraph">Her mother died before they made peace over something small that grew big. She doesn&#8217;t need the argument replayed — she needs to know the door isn&#8217;t sealed.</p>
+</div>
+
+
+
+<div class="wp-block-column hb-card is-layout-flow wp-block-column-is-layout-flow">
+<h3 class="wp-block-heading">The Bowl Still by the Door</h3>
+
+
+
+<p class="wp-block-paragraph">The family&#8217;s old dog passed in the spring, and their youngest still fills his water bowl. Nobody&#8217;s sure if that&#8217;s grief, habit, or something worth asking about.</p>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-cards has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-what-to-look-for">
+<h2 class="wp-block-heading">What to Look for in a Medium</h2>
+
+
+
+<p class="wp-block-paragraph">Not every reading is the same, and not every medium works the same way. A few signs tend to separate a grounded session from a rehearsed one:</p>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-794e3cfa wp-block-columns-is-layout-flex">
+<div class="wp-block-column hb-card is-layout-flow wp-block-column-is-layout-flow">
+<h3 class="wp-block-heading">They Explain Instead of Just Declaring</h3>
+
+
+
+<p class="wp-block-paragraph">A reader worth your time tells you where an impression is coming from, not just what it supposedly means. That difference matters.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">See Available Mediums</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-column hb-card is-layout-flow wp-block-column-is-layout-flow">
+<h3 class="wp-block-heading">They Welcome Your Questions</h3>
+
+
+
+<p class="wp-block-paragraph">You should be able to ask how a reader knows something without the session going cold. A confident medium doesn&#8217;t mind being asked.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Browse Reader Profiles</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-column hb-card is-layout-flow wp-block-column-is-layout-flow">
+<h3 class="wp-block-heading">They Don&#8217;t Promise a Guaranteed Message</h3>
+
+
+
+<p class="wp-block-paragraph">No one can guarantee who comes through or what they&#8217;ll say. A reader who admits that upfront is usually the one being straight with you.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Start With a Short Session</a></div>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">See All Available Mediums</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-steps has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-how-it-works">
+<h2 class="wp-block-heading">How a Mediumship Session Actually Works</h2>
+
+
+
+<p class="wp-block-paragraph">There&#8217;s no ceremony required and nothing you need to prepare in advance. Most sessions move through the same three stages, whether you&#8217;re brand new to this or you&#8217;ve done it a dozen times.</p>
+
+
+
+<h3 class="wp-block-heading">1. 1. Share What You&#8217;re Carrying</h3>
+
+
+
+<p class="wp-block-paragraph">You don&#8217;t need to lead with a question. Tell the medium who you&#8217;re hoping to hear from, or don&#8217;t — some people prefer to see if a name comes through unprompted, as a kind of check. Either way, this part is just about giving the medium somewhere to start listening.</p>
+
+
+
+<h3 class="wp-block-heading">2. 2. The Medium Opens a Line and Listens</h3>
+
+
+
+<p class="wp-block-paragraph">This is the part that looks like nothing is happening and is actually the whole point. A medium isn&#8217;t performing — they&#8217;re paying attention to impressions, words, images, or feelings that arrive, and trying to relay them accurately instead of interpreting them for you. Expect pauses, and expect a reader to say they&#8217;re not sure what something means yet instead of guessing out loud.</p>
+
+
+
+<h3 class="wp-block-heading">3. 3. You Get to Ask, Too</h3>
+
+
+
+<p class="wp-block-paragraph">A reading isn&#8217;t one-directional. If something the medium says half-lands, say so — that feedback often helps them refine what they&#8217;re picking up. If a detail doesn&#8217;t fit anyone you know, it&#8217;s fine to say that plainly. A good medium would rather adjust than force a connection that isn&#8217;t there.</p>
+
+
+
+<p class="wp-block-paragraph">Sessions can run short or long depending on what comes through and what you need from it. There&#8217;s no set script to follow on either side.</p>
+</div>
+
+
+
+<div class="wp-block-group hb-prose has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-what-you-can-ask">
+<h2 class="wp-block-heading">What You Can Ask — and What to Expect</h2>
+
+
+
+<p class="wp-block-paragraph">You can ask a medium almost anything connected to someone who&#8217;s passed — how they&#8217;re doing, whether they know about something happening in your life now, what they&#8217;d want you to know. You can also ask about pets, about family members you never met, or about a feeling you&#8217;ve had that you can&#8217;t otherwise explain.</p>
+
+
+
+<p class="wp-block-paragraph">What a reading won&#8217;t do is replace medical, legal, or financial guidance, and no honest medium will promise a specific message will come through or that a loved one will show up on command. Readings are about opening a line, not guaranteeing what travels down it. If grief has become heavy enough to affect your health, sleep, or daily life, a licensed grief counselor or therapist is worth having alongside anything you explore here — not instead of it.</p>
+</div>
+
+
+
+<div class="wp-block-group hb-topic has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-grief">
+<h3 class="wp-block-heading">Living With Grief</h3>
+
+
+
+<p class="wp-block-paragraph">Grief isn&#8217;t a problem to solve, and a reading won&#8217;t try to solve it. What it can offer is a different angle — a chance to hear from the person you&#8217;re missing, even briefly, instead of only carrying the missing alone.</p>
+
+
+
+<p class="wp-block-paragraph">There&#8217;s no wrong way to sit with this. Some people arrive with one specific question. Others just want space to talk around the loss before anything specific surfaces, and that&#8217;s just as valid a way to use a session.</p>
+
+
+
+<p class="hb-topic-label hb-good-label wp-block-paragraph">Good to ask</p>
+
+
+
+<ul class="wp-block-list hb-good">
+<li>How are they doing, in whatever way that question makes sense</li>
+
+
+
+<li>Do they know about something specific happening in my life right now</li>
+
+
+
+<li>Is there anything they want me to know or let go of</li>
+</ul>
+
+
+
+<p class="hb-topic-label hb-avoid-label wp-block-paragraph">Better asked elsewhere</p>
+
+
+
+<ul class="wp-block-list hb-avoid">
+<li>Exact dates or predictions about the future</li>
+
+
+
+<li>Anything meant to replace grief counseling</li>
+</ul>
+
+
+
+<p class="hb-tip wp-block-paragraph">Come as you are — there&#8217;s no right emotional state for a session like this.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Talk to a Medium About Grief</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-topic has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-family-messages">
+<h3 class="wp-block-heading">Messages Meant for the Whole Family</h3>
+
+
+
+<p class="wp-block-paragraph">Sometimes a message isn&#8217;t really for the person asking — it&#8217;s for a sibling who couldn&#8217;t be there, or a parent who won&#8217;t talk about the loss at all. A medium can still relay what comes through; what you do with it after is up to your family.</p>
+
+
+
+<p class="wp-block-paragraph">You don&#8217;t have to speak for the whole family to ask this question. One person reaching out is enough to start, and what happens with the message afterward is entirely up to whoever hears it.</p>
+
+
+
+<p class="hb-topic-label hb-good-label wp-block-paragraph">Good to ask</p>
+
+
+
+<ul class="wp-block-list hb-good">
+<li>Is there something they&#8217;d want passed along to someone specific</li>
+
+
+
+<li>Do they know how the family has been since they passed</li>
+
+
+
+<li>Is there old family tension they&#8217;d want addressed</li>
+</ul>
+
+
+
+<p class="hb-topic-label hb-avoid-label wp-block-paragraph">Better asked elsewhere</p>
+
+
+
+<ul class="wp-block-list hb-avoid">
+<li>Requests to force a message onto someone who doesn&#8217;t want one</li>
+
+
+
+<li>Details meant to settle a family dispute as fact</li>
+</ul>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Ask About a Family Message</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-topic has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-pets">
+<h3 class="wp-block-heading">Pets and the Bonds That Outlast Them</h3>
+
+
+
+<p class="wp-block-paragraph">The bond with an animal doesn&#8217;t stop mattering just because it&#8217;s sometimes treated as smaller than human loss. Mediums who work with this niche take the question as seriously as any other.</p>
+
+
+
+<p class="wp-block-paragraph">People sometimes hesitate to bring an animal into a reading, worried it isn&#8217;t a serious enough loss to ask about. It is, and a medium who works this niche won&#8217;t treat the question as smaller than any other.</p>
+
+
+
+<p class="hb-topic-label hb-good-label wp-block-paragraph">Good to ask</p>
+
+
+
+<ul class="wp-block-list hb-good">
+<li>Do they seem at ease, wherever they are now</li>
+
+
+
+<li>Is there a habit or signal I might notice from them</li>
+
+
+
+<li>Did they know how loved they were</li>
+</ul>
+
+
+
+<p class="hb-topic-label hb-avoid-label wp-block-paragraph">Better asked elsewhere</p>
+
+
+
+<ul class="wp-block-list hb-avoid">
+<li>Certainty about a pet&#8217;s exact age or cause of passing offered as proof</li>
+
+
+
+<li>Comparing one loss against another</li>
+</ul>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Ask About a Pet in Spirit</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-prose has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-methods-intro">
+<h2 class="wp-block-heading">Different Ways a Message Can Come Through</h2>
+
+
+
+<p class="wp-block-paragraph">Mediumship isn&#8217;t one fixed skill — it&#8217;s a handful of different ways information tends to arrive, and most mediums lean on one or two more than the rest. Knowing the difference helps you understand what a session with a particular reader might feel like.</p>
+
+
+
+<p class="wp-block-paragraph">Some mediums work mostly through evidence — specific, checkable details meant to confirm who&#8217;s coming through. Others shift into a lighter trance state, or rely on sound, touch, or handwriting rather than a felt sense. None of these methods is stronger than another; they&#8217;re just different instruments picking up the same signal.</p>
+
+
+
+<p class="wp-block-paragraph">The five explained below are the ones you&#8217;ll most often see offered here. You don&#8217;t need to pick one in advance — a medium will usually work in whatever way suits the connection that shows up.</p>
+</div>
+
+
+
+<div class="wp-block-group hb-method has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-evidential-mediumship">
+<h3 class="wp-block-heading">Evidential Mediumship</h3>
+
+
+
+<p class="wp-block-paragraph">Evidential mediumship is built around specificity. Instead of a general sense that someone is present, the medium aims for details you can actually check — a name, a physical trait, a shared memory, the way someone laughed.</p>
+
+
+
+<p class="wp-block-paragraph">The goal isn&#8217;t to impress you. It&#8217;s to give you something concrete enough that you can judge for yourself whether the connection feels real, rather than taking it on faith.</p>
+
+
+
+<p class="wp-block-paragraph">This tends to be the method people find most reassuring early on, because a checkable detail gives you something to weigh for yourself instead of just a feeling you&#8217;re asked to trust or dismiss outright.</p>
+
+
+
+<ul class="wp-block-list hb-explore">
+<li>A name, nickname, or initial connected to the person</li>
+
+
+
+<li>A physical detail — an old injury, a favorite object, a way of dressing</li>
+
+
+
+<li>A shared memory only you would recognize</li>
+
+
+
+<li>A specific message tied to something happening in your life now</li>
+</ul>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Try an Evidential Reading</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-method has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-trance-mediumship">
+<h3 class="wp-block-heading">Trance Mediumship</h3>
+
+
+
+<p class="wp-block-paragraph">Trance work asks the medium to step back from their own thoughts more fully than usual, letting impressions come through with less filtering in the way. Some readers describe it as quieting their own mind enough that another presence has room to come forward.</p>
+
+
+
+<p class="wp-block-paragraph">It can feel different from a standard reading — slower, sometimes with longer pauses, and the medium may describe sensations in their own body as a way of relaying what someone else was like.</p>
+
+
+
+<p class="wp-block-paragraph">Not every medium works this way, and that&#8217;s fine — trance is simply one option among several, not a requirement for a session to count as genuine mediumship work.</p>
+
+
+
+<ul class="wp-block-list hb-explore">
+<li>A shift in the medium&#8217;s tone, posture, or way of speaking</li>
+
+
+
+<li>Physical sensations described as belonging to someone else</li>
+
+
+
+<li>Longer pauses as the medium settles into the state</li>
+
+
+
+<li>Impressions that feel less filtered through the medium&#8217;s own personality</li>
+</ul>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Ask About Trance Mediumship</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-method has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-clairaudient-reading">
+<h3 class="wp-block-heading">Clairaudient Reading</h3>
+
+
+
+<p class="wp-block-paragraph">A clairaudient medium&#8217;s primary channel is sound — not necessarily an audible voice, but words, phrases, or a name that arrive the way a thought does, except it isn&#8217;t theirs. Some describe it as hearing something said inside their own head, in someone else&#8217;s cadence.</p>
+
+
+
+<p class="wp-block-paragraph">This method often produces very specific wording — a phrase your loved one actually used to say, or a nickname nobody else would know to guess.</p>
+
+
+
+<p class="wp-block-paragraph">If you&#8217;ve ever had a phrase pop into your head that didn&#8217;t feel like your own thought, that&#8217;s roughly the same mechanism a clairaudient medium learns to rely on deliberately, session after session.</p>
+
+
+
+<ul class="wp-block-list hb-explore">
+<li>A phrase or expression the person used to say often</li>
+
+
+
+<li>A name or nickname arriving with unusual clarity</li>
+
+
+
+<li>Short, specific wording rather than a vague feeling</li>
+
+
+
+<li>Song lyrics or titles connected to a memory</li>
+</ul>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Book a Clairaudient Reading</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-method has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-psychometry">
+<h3 class="wp-block-heading">Psychometry (Object Reading)</h3>
+
+
+
+<p class="wp-block-paragraph">Psychometry uses a physical object — a piece of jewelry, a photograph, a small keepsake — as a kind of anchor point. The medium holds or focuses on the object and describes whatever impressions surface from it.</p>
+
+
+
+<p class="wp-block-paragraph">You don&#8217;t need to bring anything rare or valuable. A worn ring or an old photo often carries more than something new and untouched, simply because it was part of daily life.</p>
+
+
+
+<p class="wp-block-paragraph">This method can also work well for a memory you don&#8217;t quite have words for yet — sometimes an object surfaces something a plain question wouldn&#8217;t have reached on its own.</p>
+
+
+
+<ul class="wp-block-list hb-explore">
+<li>Impressions tied directly to the object itself</li>
+
+
+
+<li>A sense of the person&#8217;s personality or habits</li>
+
+
+
+<li>A memory connected to when or how the object was used</li>
+
+
+
+<li>Emotional tone — comfort, humor, steadiness — carried by the object</li>
+</ul>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Try an Object Reading</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-method has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-automatic-writing">
+<h3 class="wp-block-heading">Automatic Writing</h3>
+
+
+
+<p class="wp-block-paragraph">Automatic writing lets a medium put pen to paper, or fingers to keys, and write without consciously composing each sentence, letting words surface more directly than in spoken conversation. Some mediums use it during a live session and read the result back to you afterward.</p>
+
+
+
+<p class="wp-block-paragraph">The output can be fragmented — single words, half-sentences, or a short passage — rather than a tidy paragraph, and that roughness is often part of what makes it feel unfiltered.</p>
+
+
+
+<p class="wp-block-paragraph">Some people find the fragments harder to interpret in the moment and prefer to sit with the written result afterward, rereading it once the session has ended and the pressure of the moment has passed.</p>
+
+
+
+<ul class="wp-block-list hb-explore">
+<li>Short phrases or single words rather than full sentences</li>
+
+
+
+<li>A shift in handwriting style or word choice mid-session</li>
+
+
+
+<li>Fragments that only make sense once you supply the context</li>
+
+
+
+<li>A message that reads more like a note than a speech</li>
+</ul>
+
+
+
+<p class="hb-closer wp-block-paragraph">Most mediums don&#8217;t limit themselves to one of these five. A session might open with a felt sense, move into specific evidential detail, and close with a line or two written down — whichever method the connection favors that day.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Ask About Automatic Writing</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-values has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-ethics-privacy">
+<h2 class="wp-block-heading">Care Before Performance</h2>
+
+
+
+<h3 class="wp-block-heading">Grief-Informed, Not Showmanship</h3>
+
+
+
+<p class="wp-block-paragraph">A reading here isn&#8217;t staged for effect. Mediums are expected to slow down around grief, sit with silence instead of filling it, and admit when they don&#8217;t have something rather than invent it to keep the moment moving.</p>
+
+
+
+<p class="wp-block-paragraph">That also means a session won&#8217;t guarantee a specific person comes through, and it won&#8217;t promise an outcome. Readings can&#8217;t replace medical, legal, or financial professional advice, and nothing here is meant to diagnose or treat grief that has become clinical.</p>
+
+
+
+<p class="wp-block-paragraph">None of this means a session feels clinical or distant. Care and honesty aren&#8217;t opposites here — a medium can be warm and still tell you plainly when nothing solid is coming through.</p>
+
+
+
+<h3 class="wp-block-heading">Your Privacy Is Handled Carefully</h3>
+
+
+
+<p class="wp-block-paragraph">Whatever you share about a loss — names, circumstances, family details — stays between you and the reader you&#8217;re connected with. It isn&#8217;t sold, reused for marketing, or shared beyond what&#8217;s needed to provide the session.</p>
+
+
+
+<p class="wp-block-paragraph">You&#8217;re free to use only a first name or a pseudonym if that feels safer, and you can stop a session at any point without needing to explain why.</p>
+
+
+
+<p class="wp-block-paragraph">If you&#8217;d rather not have a record of the session kept at all, you can ask for that too, and a considerate reader will respect it without pushing back.</p>
+</div>
+
+
+
+<div class="wp-block-group hb-values has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-why-choose-us">
+<h2 class="wp-block-heading">Why People Come Back to This Site</h2>
+
+
+
+<h3 class="wp-block-heading">Readers Who Specialize, Not Generalize</h3>
+
+
+
+<p class="wp-block-paragraph">Plenty of psychic directories mix every specialty into one long list. This one stays narrow on purpose — mediumship and grief-adjacent work — because a reader who does this daily tends to handle it with more steadiness than someone doing it occasionally between other reading types.</p>
+
+
+
+<p class="wp-block-paragraph">That focus also means the site itself stays smaller and more curated, rather than trying to be a catalog of every psychic specialty at once.</p>
+
+
+
+<h3 class="wp-block-heading">Real Conversation, Not a Script</h3>
+
+
+
+<p class="wp-block-paragraph">A scripted reading is easy to spot: vague statements that could apply to almost anyone, delivered with total confidence. What you&#8217;ll find here leans the other direction — specific enough to be checked, and honest enough to admit when nothing&#8217;s coming through clearly.</p>
+
+
+
+<p class="wp-block-paragraph">You&#8217;re free to interrupt, redirect, or ask a reader to slow down, and a grounded medium treats that as normal rather than as a disruption.</p>
+
+
+
+<h3 class="wp-block-heading">No Pressure to Keep Going</h3>
+
+
+
+<p class="wp-block-paragraph">A short session is a complete session. Nobody here measures success by how long you stay connected, and stepping away after five minutes is exactly as valid as staying for an hour.</p>
+
+
+
+<p class="wp-block-paragraph">There&#8217;s no countdown clock pushing you toward a longer package, and no follow-up message nudging you to book again before you&#8217;re ready.</p>
+</div>
+
+
+
+<div class="wp-block-group hb-faq has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-faq">
+<h2 class="wp-block-heading">Questions People Usually Ask First</h2>
+
+
+
+<h3 class="wp-block-heading">What actually happens during a mediumship reading?</h3>
+
+
+
+<p class="wp-block-paragraph">The medium settles into listening mode and describes whatever impressions, words, or images arrive — a name, a detail, a feeling. You can respond, ask questions, or just listen. There&#8217;s no fixed script on either side.</p>
+
+
+
+<h3 class="wp-block-heading">How does a medium tell a real impression from imagination?</h3>
+
+
+
+<p class="wp-block-paragraph">Most rely on how a detail arrives — sudden, specific, and separate from their own train of thought — rather than something they&#8217;re actively trying to think up. It isn&#8217;t perfect, which is part of why they&#8217;ll often say when they&#8217;re unsure.</p>
+
+
+
+<h3 class="wp-block-heading">Can a medium guarantee my person will come through?</h3>
+
+
+
+<p class="wp-block-paragraph">No, and you should be wary of anyone who claims they can. Connection isn&#8217;t something that can be commanded on demand; a reader can only stay open and see who or what shows up.</p>
+
+
+
+<h3 class="wp-block-heading">Is this the same as grief counseling?</h3>
+
+
+
+<p class="wp-block-paragraph">No. A reading can sit alongside grief support, but it isn&#8217;t a substitute for a licensed therapist or counselor, especially if grief is affecting your sleep, health, or ability to function day to day.</p>
+
+
+
+<h3 class="wp-block-heading">What if nothing comes through during my session?</h3>
+
+
+
+<p class="wp-block-paragraph">It happens, and an honest medium will tell you rather than force a connection. Some connections take more than one attempt, and some simply don&#8217;t happen on a given day — that isn&#8217;t a reflection on you.</p>
+</div>
+
+
+
+<div class="wp-block-group hb-final has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-final-cta">
+<h2 class="wp-block-heading">Ready When You Are</h2>
+
+
+
+<p class="wp-block-paragraph">There&#8217;s no perfect moment to reach out, and no requirement that you&#8217;ve processed enough first. Some people come the week after a loss. Others wait years for a specific question to settle. Both are fine.</p>
+
+
+
+<p class="wp-block-paragraph">If there&#8217;s a name sitting on the tip of your thoughts, or a small thing you&#8217;ve been wanting to ask, a session is here whenever that feels right — not before.</p>
+
+
+
+<ol class="wp-block-list hb-final-steps">
+<li>Reach out whenever you&#8217;re ready, with or without a specific question in mind</li>
+
+
+
+<li>Tell the medium as much or as little as feels right</li>
+
+
+
+<li>Take from the session whatever helps, and leave the rest</li>
+</ol>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button hb-cta"><a class="wp-block-button__link hb-cta" href="/go/" rel="nofollow sponsored">Connect With a Medium Today</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group hb-disclaimer has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-disclaimer">
+<p class="wp-block-paragraph">This site is intended for entertainment and general guidance purposes only, for adults 18 and older. Readings do not replace professional medical, legal, or financial advice and cannot guarantee specific outcomes or messages. Links on this page lead to a third-party reading service; we may receive compensation if you continue through them.</p>
+</div>
+
+</div><link rel='stylesheet' id='wp-block-heading-css' href='https://medium-psychic.net/wp-includes/blocks/heading/style.min.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='wp-block-paragraph-css' href='https://medium-psychic.net/wp-includes/blocks/paragraph/style.min.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='wp-block-button-css' href='https://medium-psychic.net/wp-includes/blocks/button/style.min.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='wp-block-buttons-css' href='https://medium-psychic.net/wp-includes/blocks/buttons/style.min.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='wp-block-group-css' href='https://medium-psychic.net/wp-includes/blocks/group/style.min.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='wp-block-columns-css' href='https://medium-psychic.net/wp-includes/blocks/columns/style.min.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='wp-block-list-css' href='https://medium-psychic.net/wp-includes/blocks/list/style.min.css?ver=7.0.2' media='all' />
+<style id="wp-block-list-inline-css">
+
+				ul.is-style-checkmark-list {
+					list-style-type: "\2713";
+				}
+
+				ul.is-style-checkmark-list li {
+					padding-inline-start: 1ch;
+				}
+/*# sourceURL=wp-block-list-inline-css */
+</style>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://medium-psychic.net/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://medium-psychic.net/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */
 const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
 //# sourceURL=https://medium-psychic.net/wp-includes/js/wp-emoji-loader.min.js
 </script>
-<footer class="site-legal-footer" role="contentinfo"><div class="legal-footer-wrap"><div class="legal-main"><a href="/about-us/">About Us</a> <span class="sep">|</span> <a href="/disclaimer/">Disclaimer</a> <span class="sep">|</span> <a href="/legal/privacy-policy/">Privacy Policy</a> <span class="sep">|</span> <a href="/legal/terms-of-service/">Terms of Service</a> <span class="sep">|</span> <a href="/contact/">Contact</a></div><div class="legal-secondary"><a href="/editorial-policy/">Editorial Policy</a> &bull; <a href="/legal/cookie-policy/">Cookie Policy</a> &bull; <a href="/accessibility/">Accessibility</a> &bull; <a href="/legal/">Legal</a></div></div><!-- i18n switcher (WP-Net-Control) --><div class="lang-switcher" style="text-align:center;padding:12px 0;font-size:14px;opacity:.85">🌐 <strong style="color:inherit">EN</strong> · <a href="https://it.medium-psychic.net/" hreflang="it" lang="it" style="color:inherit;text-decoration:underline">IT</a></div></footer><style>
-
+<footer class="site-legal-footer" role="contentinfo"><div class="legal-footer-wrap"><div class="legal-main"><a href="/about-us/">About Us</a> <span class="sep">|</span> <a href="/disclaimer/">Disclaimer</a> <span class="sep">|</span> <a href="/legal/privacy-policy/">Privacy Policy</a> <span class="sep">|</span> <a href="/legal/terms-of-service/">Terms of Service</a> <span class="sep">|</span> <a href="/contact/">Contact</a></div><div class="legal-secondary"><a href="/editorial-policy/">Editorial Policy</a> &bull; <a href="/legal/cookie-policy/">Cookie Policy</a> &bull; <a href="/accessibility/">Accessibility</a> &bull; <a href="/legal/">Legal</a></div></div></footer><style>
 .site-legal-footer{background:#111827;padding:24px 0 18px;border-top:2px solid rgba(212,168,67,0.3);}
-
 .legal-footer-wrap{max-width:1100px;margin:0 auto;padding:0 24px;text-align:center;}
-
 .legal-main{margin-bottom:10px;font-size:14px;}
-
 .legal-main a{color:rgba(255,255,255,0.8);text-decoration:none;padding:0 2px;}
-
 .legal-main a:hover{color:#D4A843;text-decoration:underline;}
-
 .legal-main .sep{color:rgba(255,255,255,0.25);margin:0 6px;}
-
 .legal-secondary{font-size:12px;}
-
 .legal-secondary a{color:rgba(255,255,255,0.45);text-decoration:none;}
-
 .legal-secondary a:hover{color:rgba(255,255,255,0.8);}
-
 </style></body>
 </html>
