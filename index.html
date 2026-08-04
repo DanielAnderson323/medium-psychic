@@ -405,6 +405,29 @@ a{text-decoration-thickness:1px!important;text-underline-offset:.1em}:where(.wp-
   }
 }
 
+/* ── Site-specific token bridge (fix: 2026-08-04) ─────
+ * This theme has no --text/--color-text/--ink custom property of its own
+ * on a DARK page background — instead a leftover legacy light-theme
+ * Customizer CSS post (post ID 5, still active for typography sizing
+ * elsewhere) defines --color-text:#2C3645, meant for a white --color-bg.
+ * homeblocks.css's generic fallback chain (--hb-text, --text,
+ * --color-text, --ink, #1c1e26) picked that up, rendering near-black
+ * text on the current react-app landing page's near-black
+ * (hsl(220 30% 6%)) body background — contrast ratio ~1.6:1, i.e.
+ * invisible. Bridge the fallback to this theme's ACTUAL current
+ * palette (the Tailwind/shadcn HSL tokens the react bundle defines at
+ * :root: --foreground/--muted-foreground/--card/--border/--primary),
+ * which are the correct on-brand colors for this dark design and give
+ * >8:1 contrast.
+ */
+:root {
+  --hb-text: hsl(var(--foreground));
+  --hb-muted: hsl(var(--muted-foreground));
+  --hb-surface: hsl(var(--card));
+  --hb-border: hsl(var(--border));
+  --hb-accent: hsl(var(--primary));
+}
+
 </style>
 <div class="hb-scope">
 <div class="wp-block-group hb-hero has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="hb-hero">
