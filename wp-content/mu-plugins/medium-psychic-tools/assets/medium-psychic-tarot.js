@@ -1,6 +1,9 @@
 (function () {
   'use strict';
 
+  const script = document.currentScript;
+  const artworkBase = script ? new URL('tarot/', script.src).href : '/wp-content/mu-plugins/medium-psychic-tools/assets/tarot/';
+
   // Авторські короткі значення карт. Питання лишається в браузері.
   const deck = [
     { name: 'The Fool', symbol: '✦', theme: 'a new beginning', action: 'try a small, reversible first step', tone: 1 },
@@ -76,6 +79,30 @@
     return node;
   }
 
+  function artwork(card) {
+    return artworkBase + card.name.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '').replace(/^the-/, '') + '.jpg';
+  }
+
+  function cardSide(className, source, alt) {
+    const side = element('div', 'mp-card-side ' + className);
+    const image = element('img');
+    image.src = source;
+    image.alt = alt;
+    image.width = 360;
+    image.height = 604;
+    side.appendChild(image);
+    return side;
+  }
+
+  function cardVisual(card) {
+    const visual = element('div', 'mp-card-visual');
+    const inner = element('div', 'mp-card-inner');
+    inner.appendChild(cardSide('mp-card-back', artworkBase + 'card-back.svg', ''));
+    inner.appendChild(cardSide('mp-card-front', artwork(card), card.name + ' tarot card artwork'));
+    visual.appendChild(inner);
+    return visual;
+  }
+
   function initialize(root, index) {
     const mode = modes[root.dataset.mpTarot] || modes.general;
     const input = root.querySelector('textarea');
@@ -90,6 +117,18 @@
     input.id = inputId;
     root.querySelector('label').htmlFor = inputId;
 
+    const preview = element('div', 'mp-card-preview');
+    preview.setAttribute('aria-hidden', 'true');
+    for (let cardIndex = 0; cardIndex < mode.positions.length; cardIndex += 1) {
+      const back = element('img');
+      back.src = artworkBase + 'card-back.svg';
+      back.alt = '';
+      back.width = 360;
+      back.height = 604;
+      preview.appendChild(back);
+    }
+    drawButton.insertAdjacentElement('afterend', preview);
+
     root.querySelectorAll('[data-suggestion]').forEach(function (button) {
       button.addEventListener('click', function () {
         input.value = button.dataset.suggestion;
@@ -103,13 +142,15 @@
       cards.replaceChildren();
       chosen.forEach(function (card, cardIndex) {
         const article = element('article');
-        const symbol = element('span', 'mp-card-symbol', card.symbol);
-        symbol.setAttribute('aria-hidden', 'true');
-        article.appendChild(symbol);
-        article.appendChild(element('p', 'mp-position', mode.positions[cardIndex]));
-        article.appendChild(element('h4', '', card.name));
-        article.appendChild(element('p', '', 'This card points to ' + card.theme + '. For ' + mode.frame + ', consider this: ' + card.action + '.'));
+        const visual = cardVisual(card);
+        const copy = element('div', 'mp-card-copy');
+        copy.appendChild(element('p', 'mp-position', mode.positions[cardIndex]));
+        copy.appendChild(element('h4', '', card.name));
+        copy.appendChild(element('p', '', 'This card points to ' + card.theme + '. For ' + mode.frame + ', consider this: ' + card.action + '.'));
+        article.appendChild(visual);
+        article.appendChild(copy);
         cards.appendChild(article);
+        window.setTimeout(function () { visual.classList.add('is-revealed'); }, 110 + cardIndex * 180);
       });
       heading.textContent = mode.title;
       if (root.dataset.mpTarot === 'yesno') {
@@ -120,6 +161,7 @@
         outcome.textContent = question ? 'Your question: ' + question : 'Hold your own question in mind as you read.';
       }
       result.hidden = false;
+      preview.hidden = true;
       status.textContent = 'Cards revealed. Your reflection is ready.';
       heading.focus();
     });
@@ -129,6 +171,7 @@
       cards.replaceChildren();
       outcome.textContent = '';
       result.hidden = true;
+      preview.hidden = false;
       status.textContent = 'Reading cleared.';
       input.focus();
     });

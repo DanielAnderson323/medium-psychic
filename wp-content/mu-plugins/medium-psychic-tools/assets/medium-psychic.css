@@ -60,9 +60,24 @@
 .mp-results[hidden] { display: none; }
 .mp-results { background: #f8f5fc; }
 .mp-results h3 { margin-bottom: 10px; }
-.mp-drawn { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,160px),1fr)); gap: 12px; margin: 20px 0; }
-.mp-drawn article { padding: 17px; border: 1px solid #d6c8e7; border-radius: 13px; background: #fff; }
-.mp-drawn .mp-card-symbol { display: grid; place-items: center; width: 52px; height: 70px; margin-bottom: 12px; border: 2px solid #beaad9; border-radius: 8px; color: #6b5191; background: linear-gradient(160deg,#fff,#eee6f7); font-size: 1.7rem; }
+.mp-results h3:focus { outline: none; }
+.mp-card-preview { display: flex; justify-content: center; gap: 12px; margin: 25px 0 0; }
+.mp-card-preview[hidden] { display: none; }
+.mp-card-preview img { display: block; width: min(27%,110px); height: auto; aspect-ratio: 360 / 604; object-fit: cover; border-radius: 7px; box-shadow: 0 10px 22px #1e153942; transform: rotate(-5deg); }
+.mp-card-preview img:only-child { width: min(50%,145px); }
+.mp-card-preview img:nth-child(2) { transform: translateY(-7px); }
+.mp-card-preview img:nth-child(3) { transform: rotate(5deg); }
+.mp-drawn { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,172px),1fr)); gap: 12px; margin: 20px 0; }
+.mp-drawn article { min-width: 0; padding: 15px; border: 1px solid #d6c8e7; border-radius: 13px; background: #fff; }
+.mp-card-visual { width: min(100%,190px); aspect-ratio: 360 / 604; margin: 0 auto 17px; perspective: 900px; filter: drop-shadow(0 9px 11px #33234333); }
+.mp-card-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .7s ease; }
+.mp-card-visual.is-revealed .mp-card-inner { transform: rotateY(180deg); }
+.mp-card-side { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden; border-radius: 8px; background: #302548; }
+.mp-card-front { transform: rotateY(180deg); background: #f7f0df; }
+.mp-card-side img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.mp-tool[data-mp-tarot="yesno"] .mp-drawn { grid-template-columns: 1fr; }
+.mp-tool[data-mp-tarot="yesno"] .mp-drawn article { display: grid; grid-template-columns: minmax(145px,190px) minmax(0,1fr); align-items: center; gap: 24px; }
+.mp-tool[data-mp-tarot="yesno"] .mp-card-visual { width: 100%; margin: 0; }
 .mp-drawn h4 { color: #2e2541 !important; margin: 5px 0; font: 600 1.15rem Georgia,serif; }
 .mp-drawn p { margin: 6px 0; line-height: 1.55; font-size: .92rem; }
 .mp-position { text-transform: uppercase; letter-spacing: .1em; font-size: .69rem !important; font-weight: 800; color: #7657a5; }
@@ -86,4 +101,11 @@
   .mp-directory-hero,.mp-tarot-hero { border-radius: 16px; }
   .mp-card { padding: 21px; }
   .mp-actions .mp-button { width: 100%; }
+}
+@media (max-width: 540px) {
+  .mp-tool[data-mp-tarot="yesno"] .mp-drawn article { grid-template-columns: 1fr; }
+  .mp-tool[data-mp-tarot="yesno"] .mp-card-visual { width: min(100%,190px); margin: 0 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mp-card-inner { transition: none; }
 }
