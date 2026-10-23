@@ -1,0 +1,24 @@
+/* Мобільна адаптація наявних секцій без зміни десктопного оформлення. */
+.medium-reading-choices {display:grid;gap:12px;margin-top:20px}
+.medium-reading-choices a {display:block;padding:14px 18px;border:1px solid #c8b4ff80;border-radius:12px;color:#e6dcff;text-decoration:none;font-weight:600}
+.medium-reading-choices a:hover,.medium-reading-choices a:focus-visible {background:#c8b4ff;color:#0b0f17;outline:2px solid #fff;outline-offset:3px}
+@media (max-width:767px) {
+  #root .pin-spacer {height:auto!important;padding:0!important;max-width:100%}
+  #root section:not(#hero) {position:relative!important;inset:auto!important;transform:none!important;width:100%!important;height:auto!important;min-height:0;padding:56px 24px;overflow:hidden}
+  #root section:not(#hero) [style*="opacity"] {opacity:1!important;transform:none!important}
+  #how-it-works > .relative {display:block;height:auto}
+  #how-it-works > .relative > .absolute {position:relative;left:auto;top:auto;width:100%;margin:0 0 32px}
+  #how-it-works .pl-16 {padding-left:48px}
+  #how-it-works p[class*="pl-"] {padding-left:0}
+  #evidence > .absolute:not(.vignette),#trust > .absolute:not(.vignette) {position:relative;left:auto;top:auto;width:100%;margin:0 0 28px}
+  #evidence > .glow-soft,#trust > .glow-soft {height:340px}
+  #between-worlds > .orb-breathe {opacity:.16!important}
+  #between-worlds > .absolute.flex {position:relative;inset:auto;min-height:280px;padding:0}
+  #book > .relative,#faq > .relative {padding-left:0;padding-right:0}
+  #root section h2 {font-size:34px;line-height:1.15;overflow-wrap:anywhere}
+  #root section h3 {overflow-wrap:anywhere}
+  #hero > .glow-soft {width:min(70vw,300px);height:54vh}
+  #hero h1,#hero p.whitespace-nowrap {font-size:clamp(24px,7vw,32px);max-width:calc(100% - 32px);white-space:normal;width:100%}
+  #hero > p {width:calc(100% - 32px);text-align:center;font-size:12px}
+  .medium-reading-choices {grid-template-columns:minmax(0,1fr)}
+}
