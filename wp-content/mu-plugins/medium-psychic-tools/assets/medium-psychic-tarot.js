@@ -3,6 +3,7 @@
 
   const script = document.currentScript;
   const artworkBase = script ? new URL('tarot/', script.src).href : '/wp-content/mu-plugins/medium-psychic-tools/assets/tarot/';
+  const artworkVersion = script ? new URL(script.src).search : '';
 
   // Авторські короткі значення карт. Питання лишається в браузері.
   const deck = [
@@ -80,7 +81,7 @@
   }
 
   function artwork(card) {
-    return artworkBase + card.name.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '').replace(/^the-/, '') + '.jpg';
+    return artworkBase + card.name.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '').replace(/^the-/, '') + '.jpg' + artworkVersion;
   }
 
   function cardSide(className, source, alt) {
@@ -97,7 +98,7 @@
   function cardVisual(card) {
     const visual = element('div', 'mp-card-visual');
     const inner = element('div', 'mp-card-inner');
-    inner.appendChild(cardSide('mp-card-back', artworkBase + 'card-back.svg', ''));
+    inner.appendChild(cardSide('mp-card-back', artworkBase + 'card-back.svg' + artworkVersion, ''));
     inner.appendChild(cardSide('mp-card-front', artwork(card), card.name + ' tarot card artwork'));
     visual.appendChild(inner);
     return visual;
@@ -121,7 +122,7 @@
     preview.setAttribute('aria-hidden', 'true');
     for (let cardIndex = 0; cardIndex < mode.positions.length; cardIndex += 1) {
       const back = element('img');
-      back.src = artworkBase + 'card-back.svg';
+      back.src = artworkBase + 'card-back.svg' + artworkVersion;
       back.alt = '';
       back.width = 360;
       back.height = 604;
