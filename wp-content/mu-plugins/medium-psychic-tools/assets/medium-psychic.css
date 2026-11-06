@@ -112,3 +112,11 @@
 
 /* Світлий перемикач мов на темному юридичному футері лише цього сайту. */
 .site-legal-footer .lang-switcher { color: #f5f6fa; }
+
+/* Homepage images (hp-img) */
+.hp-img{margin:0 auto 2.5rem;max-width:1100px;padding:0 0}
+.wrap .hp-img,.container .hp-img{padding:0}
+.hp-img img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:18px;border:1px solid rgba(167,139,250,.25);box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.hp-img--hero{margin-top:2rem}
+.hp-img--hero img{aspect-ratio:21/9}
+@media (max-width:640px){.hp-img{padding:0 16px;margin-bottom:1.5rem}.hp-img--hero{margin-top:1rem}.hp-img img,.hp-img--hero img{aspect-ratio:3/2}}
